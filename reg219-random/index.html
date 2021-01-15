@@ -1,5 +1,6 @@
-<!-- Customization Page -->
+﻿<!-- Customization Page -->
 <!-- is the first page a user sees. Reyhan Guleryuz likes gitkraken likes coding-->
+<!-- Juan making changes to source code-->
 
 <!DOCTYPE html>
 <html>
@@ -7,7 +8,7 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="config.js"></script>
-    <script src="utils.js"></script>    
+    <script src="utils.js"></script>
     <title>Foodterist Customization</title>
     <link rel="stylesheet" href="index.css"> <!-- link the css sheet -->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -18,202 +19,202 @@
 
 <body>
 
-  <!-- banner -->
-  <div class="hero-image" id="banner">
-      <div class="hero-text">
-          <h1>Foodterist</h1>
-          <p>enjoy the food</p>
-      </div>
-  </div>
-
-  <!-- navigation bar -->
-  <div id="navbar">
-    <a class="active" href="main.html" id="home_link">Home</a>
-    <a href="./upload.html" id="upload_link">Upload</a>
-  </div>
-
-  <!-- Instructions to config and skip button -->
-  <h2>
-    <i>I am looking for food that is ....</i>
-  </h2> 
-
-  <!-- Configurations table -->
-  <div class="row">
-
-    <div class="column" style="background-color:#ccc;">
-      <h3 id=price_text >By price...*</h3>
-      <select id="price_select">
-        <option value="none"></option>
-        <option value="one_dollar">$</option>
-        <option value="two_dollar">$$</option>
-        <option value="three_dollar">$$$</option>
-      </select>
-    </div>
-    
-    <div class="column" style="background-color:#ddd;">
-      <h3>By rating...</h3>
-      <select id="rating_select">
-        <option value="none"></option>
-        <option value="one_star">>= 1 star</option>
-        <option value="two_star">> 2 stars</option>
-        <option value="three_star">> 3 stars</option>
-        <option value="four_star">> 4 stars</option>
-        <option value="five_star">> 5 stars</option>
-      </select>
+    <!-- banner -->
+    <div class="hero-image" id="banner">
+        <div class="hero-text">
+            <h1>Foodterist</h1>
+            <p>enjoy the food</p>
+        </div>
     </div>
 
-    <div class="column" style="background-color:#eee;">
-      <h3>By dietary restriction...</h3>
-      
-      <form method="custom_get_diet">
-        <input type="checkbox" name="diet" id="dairy_check" value="dairy">Dairy-free<br>
-        <input type="checkbox" name="diet" id="gluten_check" value="gluten">Gluten-free<br>
-        <input type="checkbox" name="diet" id="halal_check" value="halal">Halal<br>
-        <input type="checkbox" name="diet" id="vegan_check" value="vegan">Vegan<br>
-        <input type="checkbox" name="diet" id="vegetarian_check" value="vegetarian">Vegetarian<br>
-      </form>
+    <!-- navigation bar -->
+    <div id="navbar">
+        <a class="active" href="main.html" id="home_link">Home</a>
+        <a href="./upload.html" id="upload_link">Upload</a>
     </div>
-  </div>
-  
-  <p>
-    <input type="submit" class="btn" id="submit_btn" value="Find me some food!">
-  </p>
+
+    <!-- Instructions to config and skip button -->
+    <h2>
+        <i>I am looking for food that is ....</i>
+    </h2>
+
+    <!-- Configurations table -->
+    <div class="row">
+
+        <div class="column" style="background-color:#ccc;">
+            <h3 id=price_text>By price...*</h3>
+            <select id="price_select">
+                <option value="none"></option>
+                <option value="one_dollar">$</option>
+                <option value="two_dollar">$$</option>
+                <option value="three_dollar">$$$</option>
+            </select>
+        </div>
+
+        <div class="column" style="background-color:#ddd;">
+            <h3>By rating...</h3>
+            <select id="rating_select">
+                <option value="none"></option>
+                <option value="one_star">>= 1 star</option>
+                <option value="two_star">> 2 stars</option>
+                <option value="three_star">> 3 stars</option>
+                <option value="four_star">> 4 stars</option>
+                <option value="five_star">> 5 stars</option>
+            </select>
+        </div>
+
+        <div class="column" style="background-color:#eee;">
+            <h3>By dietary restriction...</h3>
+
+            <form method="custom_get_diet">
+                <input type="checkbox" name="diet" id="dairy_check" value="dairy">Dairy-free<br>
+                <input type="checkbox" name="diet" id="gluten_check" value="gluten">Gluten-free<br>
+                <input type="checkbox" name="diet" id="halal_check" value="halal">Halal<br>
+                <input type="checkbox" name="diet" id="vegan_check" value="vegan">Vegan<br>
+                <input type="checkbox" name="diet" id="vegetarian_check" value="vegetarian">Vegetarian<br>
+            </form>
+        </div>
+    </div>
+
+    <p>
+        <input type="submit" class="btn" id="submit_btn" value="Find me some food!">
+    </p>
 
 
-  <div class=foot id=footer>
-    <h4>  <p>* Price ranges are as follows:</p> </h4>
-    <h5>
-      <p>$: $0 - $20</p>
-      <p>$$: $20 - $40</p>
-      <p>$$$: > $40</p>
-    </h5>
-  </div>
-  
-  <script type="text/javascript">
+    <div class=foot id=footer>
+        <h4>  <p>* Price ranges are as follows:</p> </h4>
+        <h5>
+            <p>$: $0 - $20</p>
+            <p>$$: $20 - $40</p>
+            <p>$$$: > $40</p>
+        </h5>
+    </div>
 
-    // Get user's IP for logging
-    getIP();
+    <script type="text/javascript">
 
-
-    // when clicked, display prices 
-    function show_and_hide() {
-      var x = document.getElementById("footer");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    }
-    $("#price_text").on('click', function(){
-      show_and_hide();
-    });
+        // Get user's IP for logging
+        getIP();
 
 
-    // log banner is clicked 
-    $("#banner").on('click', function(){
-      logit(0, ip2int( myIP ), "action: banner from config isclicked");
-      console.log("logged");
-      console.log("price: " + $("#price_select").val());
-    });
+        // when clicked, display prices
+        function show_and_hide() {
+            var x = document.getElementById("footer");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+        $("#price_text").on('click', function () {
+            show_and_hide();
+        });
 
 
-    // log whenever skip to home is clicked 
-    $("#home_link").on('click', function(){
-      logit(0, ip2int( myIP ), "action: home from config isclicked");
-      console.log("logged");
-    });
+        // log banner is clicked
+        $("#banner").on('click', function () {
+            logit(0, ip2int(myIP), "action: banner from config isclicked");
+            console.log("logged");
+            console.log("price: " + $("#price_select").val());
+        });
 
-    // log whenever upload button is clicked 
-    $("#upload_link").on('click', function(){
-      logit(0, ip2int( myIP ), "action: upload from config isclicked");
-      console.log("logged");
-    });
 
-    // whenever submit is clicked,
-    // get configuration settings
-    // and log the click
-    $("#submit_btn").on('click', function(){
+        // log whenever skip to home is clicked
+        $("#home_link").on('click', function () {
+            logit(0, ip2int(myIP), "action: home from config isclicked");
+            console.log("logged");
+        });
 
-      // log click
-      logit(0, ip2int( myIP ), "action: customize submit isclicked");
-      console.log("logged");
+        // log whenever upload button is clicked
+        $("#upload_link").on('click', function () {
+            logit(0, ip2int(myIP), "action: upload from config isclicked");
+            console.log("logged");
+        });
 
-      // Set variables in config.js for JSON data fetch:
-      
-      // Select pricing
-      // Otherwise, price is declared by default as any (0) (in config.js)
-      if ( $("#price_select").val() === "three_dollar" ) {
-        price_lvl = 3;
-        window.localStorage.setItem("price_lvl", 3);
-      
-      } else if ( $("#price_select").val() === "two_dollar" ) {
-        price_lvl = 2;
-        window.localStorage.setItem("price_lvl", 2);
-      
-      } else if ( $("#price_select").val() === "one_dollar" ) {
-        price_lvl = 1;
-        window.localStorage.setItem("price_lvl", 1);
-      } 
-      else {
-        window.localStorage.setItem("price_lvl", 0);
-      }
+        // whenever submit is clicked,
+        // get configuration settings
+        // and log the click
+        $("#submit_btn").on('click', function () {
 
-  
-    
-      // If checked filter dietary restrictions
-      if ( $("#gluten_check").prop('checked') ) {
-        must_be_gluten = true;
-        window.localStorage.setItem("must_be_gluten", true);
-      }
-      else window.localStorage.setItem("must_be_gluten", false);
+            // log click
+            logit(0, ip2int(myIP), "action: customize submit isclicked");
+            console.log("logged");
 
-      if ( $("#vegan_check").prop('checked') ) {
-        must_be_vegan = true;
-        window.localStorage.setItem("must_be_vegan", true);
+            // Set variables in config.js for JSON data fetch:
 
-      }
-      else window.localStorage.setItem("must_be_vegan", false);
+            // Select pricing
+            // Otherwise, price is declared by default as any (0) (in config.js)
+            if ($("#price_select").val() === "three_dollar") {
+                price_lvl = 3;
+                window.localStorage.setItem("price_lvl", 3);
 
-      if ( $("#vegetarian_check").prop('checked') ) {
-        must_be_vegetarian = true;
-        window.localStorage.setItem("must_be_vegetarian", true);
-      }
-      else window.localStorage.setItem("must_be_vegetarian", false);
+            } else if ($("#price_select").val() === "two_dollar") {
+                price_lvl = 2;
+                window.localStorage.setItem("price_lvl", 2);
 
-      if ( $("#dairy_check").prop('checked') ) {
-        must_be_dairy = true;
-        window.localStorage.setItem("must_be_dairy", true);
-      }
-      else window.localStorage.setItem("must_be_dairy", false);
+            } else if ($("#price_select").val() === "one_dollar") {
+                price_lvl = 1;
+                window.localStorage.setItem("price_lvl", 1);
+            }
+            else {
+                window.localStorage.setItem("price_lvl", 0);
+            }
 
-      if ( $("#halal_check").prop('checked') ) {
-        must_be_halal = true;
-        window.localStorage.setItem("must_be_halal", true);
-      }
-      else window.localStorage.setItem("must_be_halal", false);
 
-      // Set rating minimum
-      // Otherwise, min is declared by default as one star (in config.js)
-      if ( $("#rating_select").val() == "five_star" ) {
-        min_rating_lvl = 5; 
 
-      } else if ( $("#rating_select").val() == "four_star" ) {
-        min_rating_lvl = 4; 
+            // If checked filter dietary restrictions
+            if ($("#gluten_check").prop('checked')) {
+                must_be_gluten = true;
+                window.localStorage.setItem("must_be_gluten", true);
+            }
+            else window.localStorage.setItem("must_be_gluten", false);
 
-      } else if ( $("#rating_select").val() == "three_star" ) {
-        min_rating_lvl = 3; 
+            if ($("#vegan_check").prop('checked')) {
+                must_be_vegan = true;
+                window.localStorage.setItem("must_be_vegan", true);
 
-      } else if ( $("#rating_select").val() == "two_star" ) {
-        min_rating_lvl = 2; 
-      }
+            }
+            else window.localStorage.setItem("must_be_vegan", false);
 
-      window.localStorage.setItem("min_rating_lvl", min_rating_lvl);
+            if ($("#vegetarian_check").prop('checked')) {
+                must_be_vegetarian = true;
+                window.localStorage.setItem("must_be_vegetarian", true);
+            }
+            else window.localStorage.setItem("must_be_vegetarian", false);
 
-      // Redirect to html page
-      location.href = "main.html";
-    });
-  </script>
+            if ($("#dairy_check").prop('checked')) {
+                must_be_dairy = true;
+                window.localStorage.setItem("must_be_dairy", true);
+            }
+            else window.localStorage.setItem("must_be_dairy", false);
+
+            if ($("#halal_check").prop('checked')) {
+                must_be_halal = true;
+                window.localStorage.setItem("must_be_halal", true);
+            }
+            else window.localStorage.setItem("must_be_halal", false);
+
+            // Set rating minimum
+            // Otherwise, min is declared by default as one star (in config.js)
+            if ($("#rating_select").val() == "five_star") {
+                min_rating_lvl = 5;
+
+            } else if ($("#rating_select").val() == "four_star") {
+                min_rating_lvl = 4;
+
+            } else if ($("#rating_select").val() == "three_star") {
+                min_rating_lvl = 3;
+
+            } else if ($("#rating_select").val() == "two_star") {
+                min_rating_lvl = 2;
+            }
+
+            window.localStorage.setItem("min_rating_lvl", min_rating_lvl);
+
+            // Redirect to html page
+            location.href = "main.html";
+        });
+    </script>
 
 
 </body>
-<html> 
+<html>
